@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { RouteConfig } from "./routes/RouteConfig";
 
 // Style
-import "../src/assets/css/index.css";
+import "../src/assets/css/index.scss";
 
 // Render Dom
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(

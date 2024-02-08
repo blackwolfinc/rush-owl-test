@@ -1,7 +1,7 @@
 import React, { useState, ChangeEvent, FormEvent, useCallback } from 'react';
 import Dashboard from './Dashboard';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; 
+import 'react-toastify/dist/ReactToastify.css';
 import { postLoginUser } from '../hooks/api/user/post-login-user';
 
 //=================================================================
@@ -91,7 +91,7 @@ export const Login: React.FC = () => {
       } catch (error) {
         // Handle error
         console.error(error);
-        toast.error("Failed to log in");
+        toast.error("Failed to log in ");
       }
     }
   }, [validateForm, formData.email, formData.password]);
@@ -106,30 +106,34 @@ export const Login: React.FC = () => {
       {loggedIn ? (
         <Dashboard email={formData.email} password={formData.password} />
       ) : (
-        <form onSubmit={handleSubmit} className="login-form">
-          <div className="form-group">
+        <form onSubmit={handleSubmit} className="login-form h-screen justify-center items-center flex flex-col space-y-4">
+        <div className='h-[20rem] flex items-center flex-col justify-center w-full bg-indigo-100 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 border border-gray-100 max-w-[25rem] '>
+          <div className="form-group min-w-[20rem] flex justify-between flex-col">
             <label htmlFor="email">Email</label>
             <input
               type="text"
               id="email"
               name="email"
+              className='border'
               value={formData.email}
               onChange={handleChange}
             />
           </div>
-          <div className="form-group">
+          <div className="form-group  min-w-[20rem] flex justify-between flex-col">
             <label htmlFor="password">Password</label>
             <input
               type="password"
               id="password"
               name="password"
+              className='border'
               value={formData.password}
               onChange={handleChange}
             />
           </div>
-          {formData.errors.email && <div className="error">{formData.errors.email}</div>}
-          {formData.errors.password && <div className="error">{formData.errors.password}</div>}
-          <button type="submit">Login</button>
+          {formData.errors.email && <div className="error text-red-500">{formData.errors.email}</div>}
+          {formData.errors.password && <div className="error-1 text-red-500">{formData.errors.password}</div>}
+          <button className='w-[20rem] bg-blue-50' type="submit">Login</button>
+          </div>
         </form>
       )}
     </div>

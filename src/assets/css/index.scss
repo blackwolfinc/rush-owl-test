@@ -2,45 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-.login-form{
-    background: url("../img/background.jpg");
-
+.login-form {
+  background: url("../img/background.jpg");
 }
-input{
-    border-radius: 10px;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    margin-top: 0.3rem;
-    height: 2rem;
+input {
+  border-radius: 10px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-top: 0.3rem;
+  height: 2rem;
 }
 
 button {
-    border-radius: 10px;
-    margin-top: 2.5rem !important;
-    padding: 0.5rem 0rem;
-    background: #15483a !important;
+  border-radius: 10px;
+  margin-top: 2.5rem !important;
+  padding: 0.5rem 0rem;
+  background: #15483a !important;
+  border: 1px solid #34846f9b;
+  color: white;
+  &:hover {
+    transform: scale(1.05);
+    background: #247560 !important;
     border: 1px solid #34846f9b;
-    color: white;
-    &:hover {
-        transform: scale(1.05);
-        background: #247560 !important;
-        border: 1px solid #34846f9b;
-    }
-    @apply duration-300
-
+  }
+  @apply duration-300;
 }
 
-label{
-    color: aliceblue;
-    margin-top: 1rem;
-
+label {
+  color: aliceblue;
+  margin-top: 1rem;
 }
 
-.error{
-    margin-top: 1rem;
-    @apply absolute bottom-[-3rem]
+.error {
+  margin-top: 1rem;
+  @apply absolute bottom-[-3rem];
 }
-.error-1{
-    margin-top: 1rem;
-    @apply absolute bottom-[-5rem]
+.error-1 {
+  margin-top: 1rem;
+  @apply absolute bottom-[-5rem];
 }

@@ -1,0 +1,1 @@
+on react js sebelum di run akan di jadikan dulu Virtual DOM , di react native tidak 
